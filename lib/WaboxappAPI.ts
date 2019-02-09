@@ -43,7 +43,11 @@ export default class WaboxappAPI {
       const response = await this.axiosInstance.post(url, data)
       return response.data
     } catch (error) {
-      throw error
+      if (error.response !== void 0) {
+        throw new Error(error.response.data.error)
+      } else {
+        throw error
+      }
     }
   }
 }
