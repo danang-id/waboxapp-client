@@ -1,0 +1,27 @@
+# MacOS
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# modules
+node_modules
+
+# npm
+*.log
+*.gz
+
+# Yarn
+yarn-error.log
+
+# Production
+dist
+.env

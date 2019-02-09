@@ -1,0 +1,36 @@
+{
+  "name": "waboxapp-client",
+  "version": "1.0.0",
+  "description": "Waboxapp Client Library for Node.js",
+  "main": "dist/Client.js",
+  "types": "dist/Client.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danang-id/waboxapp-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danang-id/waboxapp-client/issues"
+  },
+  "homepage": "https://github.com/danang-id/waboxapp-client#readme",
+  "author": "Danang Galuh Tegar Prasetyo <danang.galuh.t@gmail.com> (https://github.com/danang-id)",
+  "license": "Apache-2.0",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^10.12.24",
+    "chai": "^4.2.0",
+    "dotenv": "^6.2.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
