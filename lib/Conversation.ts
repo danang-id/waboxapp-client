@@ -1,5 +1,7 @@
 import Random from './Random'
 import WaboxappAPI, { WaboxappRequestEndpoint } from './WaboxappAPI'
+import IConversationOptions from './interfaces/IConversationOptions'
+import { ISendResponse } from './interfaces/IResponses'
 
 /**
  * Waboxapp Conversation class

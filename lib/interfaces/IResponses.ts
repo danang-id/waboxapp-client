@@ -4,7 +4,7 @@
  * @param success - Indicate whether the message has been successfully receive by Waboxapp.
  * @param customUID - Your custom unique identifier for this message.
  */
-interface ISendResponse {
+export interface ISendResponse {
   success: boolean
   custom_uid: string
 }
@@ -21,7 +21,7 @@ interface ISendResponse {
  * @param plugged - Indicates whether your smartphone is plugged and charging.
  * @param locale - Your WhatsApp web session locale.
  */
-interface IAccountStatusResponse {
+export interface IAccountStatusResponse {
   success: boolean
   uid: string
   hook_url: string

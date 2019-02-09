@@ -4,6 +4,6 @@
  *
  * @param phoneNumber - Recipient WhatsApp account phone number with international code.
  */
-interface IConversationOptions {
+export default interface IConversationOptions {
   phoneNumber: string
 }

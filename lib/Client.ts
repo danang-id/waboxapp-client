@@ -1,5 +1,7 @@
 import Conversation from './Conversation'
 import WaboxappAPI, { WaboxappRequestEndpoint } from './WaboxappAPI'
+import IClientOptions from './interfaces/IClientOptions'
+import { IAccountStatusResponse } from './interfaces/IResponses'
 
 /**
  * Waboxapp Client class
