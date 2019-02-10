@@ -59,7 +59,7 @@ export default class Conversation {
    */
   public async sendImage(
     imageUrl: string,
-    optionalParams: {
+    optionalParams?: {
       caption?: string
       description?: string
     },
