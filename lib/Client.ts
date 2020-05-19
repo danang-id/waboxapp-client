@@ -7,22 +7,20 @@ import { IAccountStatusResponse } from './interfaces/IResponses'
  * Waboxapp Client class
  */
 export default class Client {
-  private options: IClientOptions
-  private waboxappAPI: WaboxappAPI
+  private readonly waboxappAPI: WaboxappAPI
 
   /**
    * @param options - Waboxapp Client options.
    */
-  constructor(options: IClientOptions) {
-    this.options = options
+  constructor(private options: IClientOptions) {
     this.waboxappAPI = new WaboxappAPI(this.options.apiToken, this.options.phoneNumber)
   }
 
   /**
-   * Get conversation instance with spesific WhatsApp phone number.
+   * Get conversation instance with specific WhatsApp phone number.
    *
    * @param toPhoneNumber - The destination WhatsApp phone number of your conversation.
-   * @returns Conversation instance with spesific WhatsApp phone number.
+   * @returns Conversation instance with specific WhatsApp phone number.
    */
   public getConversation(toPhoneNumber: string): Conversation {
     return new Conversation(

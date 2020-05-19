@@ -4,12 +4,10 @@ export default class Random {
       byteLength = 4
     }
     if (byteLength > 1) {
-      const random =
-        this.generate(byteLength - 1) +
+      return this.generate(byteLength - 1) +
         Math.random()
           .toString(36)
           .substring(2, 10)
-      return random
     } else {
       return Math.random()
         .toString(36)

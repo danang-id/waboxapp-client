@@ -1,19 +1,15 @@
 import axios, { AxiosInstance } from 'axios'
 
 export default class WaboxappAPI {
-  private token: string
-  private uid: string
   private axiosInstance: AxiosInstance
 
-  constructor(token: string, uid: string) {
-    this.token = token
-    this.uid = uid
+  constructor(private readonly token: string, private readonly uid: string) {
     this.axiosInstance = axios.create({
       baseURL: 'https://www.waboxapp.com/api/',
     })
   }
 
-  private createUrl(endpoint: WaboxappRequestEndpoint): string {
+  private static createUrl(endpoint: WaboxappRequestEndpoint): string {
     switch (endpoint) {
       case WaboxappRequestEndpoint.SEND_CHAT:
         return '/send/chat'
@@ -31,7 +27,7 @@ export default class WaboxappAPI {
   }
 
   public async request(endpoint: WaboxappRequestEndpoint, data?: any): Promise<any> {
-    let url = this.createUrl(endpoint)
+    let url = WaboxappAPI.createUrl(endpoint)
     if (data === void 0) {
       data = {}
       url = url + '/' + this.uid

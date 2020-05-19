@@ -7,16 +7,11 @@ import { ISendResponse } from './interfaces/IResponses'
  * Waboxapp Conversation class
  */
 export default class Conversation {
-  private options: IConversationOptions
-  private waboxappAPI: WaboxappAPI
-
   /**
    * @param options - Waboxapp Conversation options.
+   * @param waboxappAPI - Waboxapp API Client
    */
-  constructor(options: IConversationOptions, waboxappAPI: WaboxappAPI) {
-    this.options = options
-    this.waboxappAPI = waboxappAPI
-  }
+  constructor(private options: IConversationOptions, private waboxappAPI: WaboxappAPI) {}
 
   /**
    * Send WhatsApp text message (chat).
